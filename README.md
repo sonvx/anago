@@ -150,8 +150,9 @@ $ pip install anago
 or install from the repository:
 
 ```bash
-$ git clone https://github.com/Hironsan/anago.git
+$ git clone https://github.com/sonvx/anago.git
 $ cd anago
+$ python setup.py bdist_wheel
 $ python setup.py install
 ```
 
