@@ -158,5 +158,7 @@ class Sequence(object):
         self = cls()
         self.p = IndexTransformer.load(preprocessor_file)
         self.model = load_model(weights_file, params_file)
+        # Added by Sonvx on Jan 14, 2021: fix issue ("<tensor> is not an element of this graph." when loading model)
+        self.model._make_predict_function()
 
         return self
